@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package com.amos.grpc.api.service;
+
+import "google/protobuf/any.proto";
+import "google/protobuf/empty.proto";
+import "model/hello_model.proto";
+
+option java_multiple_files = true;
+option java_package = "com.amos.grpc.api.service";
+option java_outer_classname = "HelloServiceProto";
+//option objc_class_prefix = "HLW";
+
+// HelloService
+service HelloService {
+
+  // sayHello
+  rpc sayHello (com.amos.grpc.api.model.HelloRequest) returns (com.amos.grpc.api.model.HelloResponse);
+
+  // register
+  rpc register (com.amos.grpc.api.model.RegisterRequest) returns (com.amos.grpc.api.model.CommonResponse);
+
+  // empty param and response
+  rpc good (google.protobuf.Empty) returns (google.protobuf.Any);
+}

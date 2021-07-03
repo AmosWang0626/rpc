@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package com.amos.grpc.api.model;
+
+import "google/protobuf/any.proto";
+
+option java_multiple_files = true;
+option java_package = "com.amos.grpc.api.model";
+option java_outer_classname = "HelloModelProto";
+//option objc_class_prefix = "HLW";
+
+// sayHello
+message HelloRequest {
+  string name = 1;
+}
+
+message HelloResponse {
+  string message = 1;
+}
+
+// register
+message RegisterRequest {
+  string name = 1;
+  string gender = 2;
+  int32 age = 3;
+  map<string, string> extInfo = 4;
+}
+
+message CommonResponse {
+  string code = 1;
+  string message = 2;
+  google.protobuf.Any body = 3;
+}

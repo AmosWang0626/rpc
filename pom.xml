@@ -23,6 +23,10 @@
         <module>arpc-netty</module>
         <module>arpc-consumer</module>
         <module>arpc-provider</module>
+        <!-- grpc -->
+        <module>grpc-api</module>
+        <module>grpc-consumer</module>
+        <module>grpc-provider</module>
     </modules>
 
     <properties>
@@ -35,6 +39,7 @@
 
     <dependencyManagement>
         <dependencies>
+            <!-- current project -->
             <dependency>
                 <groupId>com.amos</groupId>
                 <artifactId>common-api</artifactId>
@@ -45,6 +50,14 @@
                 <artifactId>arpc-netty</artifactId>
                 <version>1.0.0</version>
             </dependency>
+            <dependency>
+                <groupId>com.amos</groupId>
+                <artifactId>grpc-api</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+            <!-- current project end -->
+
+            <!-- spring -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
