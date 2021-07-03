@@ -13,10 +13,16 @@
 
     <modules>
         <module>common-api</module>
+        <!-- dubbo -->
         <module>dubbo-consumer</module>
         <module>dubbo-provider</module>
+        <!-- spring cloud -->
         <module>spring-cloud-consumer</module>
         <module>spring-cloud-provider</module>
+        <!-- arpc -->
+        <module>arpc-netty</module>
+        <module>arpc-consumer</module>
+        <module>arpc-provider</module>
     </modules>
 
     <properties>
@@ -32,6 +38,11 @@
             <dependency>
                 <groupId>com.amos</groupId>
                 <artifactId>common-api</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.amos</groupId>
+                <artifactId>arpc-netty</artifactId>
                 <version>1.0.0</version>
             </dependency>
             <dependency>

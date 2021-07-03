@@ -9,14 +9,11 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>dubbo-provider</artifactId>
+    <artifactId>arpc-provider</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
-        <!-- @since 3.0.0, dubbo采用应用级别注册，通过切版本，看 Nacos 服务提供者信息 -->
-        <!--<dubbo.version>3.0.0</dubbo.version>-->
-        <dubbo.version>2.7.12</dubbo.version>
     </properties>
 
     <dependencies>
@@ -25,14 +22,8 @@
             <artifactId>common-api</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.apache.dubbo</groupId>
-            <artifactId>dubbo</artifactId>
-            <version>${dubbo.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.dubbo</groupId>
-            <artifactId>dubbo-registry-nacos</artifactId>
-            <version>${dubbo.version}</version>
+            <groupId>com.amos</groupId>
+            <artifactId>arpc-netty</artifactId>
         </dependency>
 
         <dependency>
@@ -51,5 +42,4 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
 </project>
